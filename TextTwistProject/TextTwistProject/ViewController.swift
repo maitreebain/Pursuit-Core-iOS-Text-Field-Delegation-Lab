@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var scrambledWord: UILabel!
     
-     let random = Word.getRandomWord()
+    let random = Word(unscrambled: Word.getRandomWord())
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,22 @@ class ViewController: UIViewController {
     }
     @IBAction func nextWordButtonPressed(_ sender: UIButton) {
         
+        
     }
-    
+        
 }
 
+extension ViewController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField,
+                   shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool {
+
+        if let oldString = textField.text {
+            let newString = oldString.replacingCharacters(in: Range(range, in: oldString)!,
+                                                          with: string)
+            
+        }
+    
+    }
+}

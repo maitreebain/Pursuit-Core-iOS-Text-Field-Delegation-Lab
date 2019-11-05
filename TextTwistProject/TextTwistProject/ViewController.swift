@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var scrambledWord: UILabel!
     
-    let random = Word(unscrambled: Word.getRandomWord())
+    let random = Word.getRandomWord()
     
     override func viewDidLoad() {
         super.viewDidLoad()

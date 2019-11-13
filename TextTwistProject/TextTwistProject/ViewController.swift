@@ -19,13 +19,16 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        scrambledWord.text = random.scrambled
     }
 // functions and methods
     
-    func scrambledWordPresented() {
-        scrambledWord.text = random
-    }
+//    func scrambledWordPresented() {
+//        scrambledWord.text = random
+//    }
+    
+    
     @IBAction func nextWordButtonPressed(_ sender: UIButton) {
         
         
@@ -44,6 +47,6 @@ extension ViewController: UITextFieldDelegate {
                                                           with: string)
             
         }
-    
+    return true
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8051BD22237C8F7300868BB1 /* UserAnswerComparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8051BD21237C8F7300868BB1 /* UserAnswerComparison.swift */; };
 		CD00BEFB2370FAFD0050736B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD00BEFA2370FAFD0050736B /* AppDelegate.swift */; };
 		CD00BEFD2370FAFD0050736B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD00BEFC2370FAFD0050736B /* SceneDelegate.swift */; };
 		CD00BEFF2370FAFD0050736B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD00BEFE2370FAFD0050736B /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8051BD21237C8F7300868BB1 /* UserAnswerComparison.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAnswerComparison.swift; sourceTree = "<group>"; };
 		CD00BEF72370FAFD0050736B /* TextTwistProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextTwistProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD00BEFA2370FAFD0050736B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD00BEFC2370FAFD0050736B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				CD00BEFC2370FAFD0050736B /* SceneDelegate.swift */,
 				CD00BEFE2370FAFD0050736B /* ViewController.swift */,
 				CD00BF002370FAFD0050736B /* Main.storyboard */,
+				8051BD21237C8F7300868BB1 /* UserAnswerComparison.swift */,
 				CDA1C53123713F2000FCD1AB /* Word.swift */,
 				CD00BF032370FAFF0050736B /* Assets.xcassets */,
 				CD00BF052370FAFF0050736B /* LaunchScreen.storyboard */,
@@ -204,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD00BEFF2370FAFD0050736B /* ViewController.swift in Sources */,
+				8051BD22237C8F7300868BB1 /* UserAnswerComparison.swift in Sources */,
 				CDA1C53223713F2000FCD1AB /* Word.swift in Sources */,
 				CD00BEFB2370FAFD0050736B /* AppDelegate.swift in Sources */,
 				CD00BEFD2370FAFD0050736B /* SceneDelegate.swift in Sources */,

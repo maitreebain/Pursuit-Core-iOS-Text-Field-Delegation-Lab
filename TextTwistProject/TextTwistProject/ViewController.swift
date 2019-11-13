@@ -22,21 +22,33 @@ class ViewController: UIViewController {
         
         scrambledWord.text = random.scrambled
     }
+    
 // functions and methods
     
-//    func scrambledWordPresented() {
-//        scrambledWord.text = random
-//    }
-    
-    
-    @IBAction func nextWordButtonPressed(_ sender: UIButton) {
+    func userAnswerCheck() {
+        var userGuess = userAnswer.text ?? ""
         
         
     }
+    
         
 }
 
 extension ViewController: UITextFieldDelegate {
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        <#code#>
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     func textField(_ textField: UITextField,
                    shouldChangeCharactersIn range: NSRange,

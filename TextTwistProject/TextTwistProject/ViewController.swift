@@ -70,31 +70,18 @@ extension ViewController: UITextFieldDelegate {
                    replacementString string: String) -> Bool {
 
         
-
         for value in scrambledWord.text! {
                 for char in string {
-                    if !(newWord.contains(value)) {
                     if value == char {
                         newWord += value.description//b
+                        
+                        scrambledWord.text?.remove(at: (scrambledWord.text?.firstIndex(of: Character(string)))!)
                         }
-                    }
             }
         }
         
-        print(newWord)
-
-//
-                            
-//                            let rePlaced = scrambledWordArray.remove(at: Int)
-//                            let replaced = scrambledWord.text?.replacingCharacters(in: RangeExpression, with: <#T##StringProtocol#>)
-        //                    scramledWordArray.remove(at: )
-//                        }
-//                    }
-//                }
+    print(newWord)
         
-        
-        
-            
     return true
     }
 }

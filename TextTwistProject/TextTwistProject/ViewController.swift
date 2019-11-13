@@ -19,20 +19,17 @@ class ViewController: UIViewController {
     
     let userAnsComparison = ResultConditions()
     
-    var scrambledChar: Character = "a" {
-        didSet {
-            
-        }
-    }
-    
-    
-    
-    
+    var newWord = ""
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         scrambledWord.text = random.scrambled
+        
+        userAnswer.delegate = self
+
+                            
     }
     
 // functions and methods
@@ -56,13 +53,9 @@ extension ViewController: UITextFieldDelegate {
         return true
     }
     
+
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        
-        let userText = textField.text ?? ""
-        
-        for char in userText {
-            if
-        }
         
         
         
@@ -76,13 +69,28 @@ extension ViewController: UITextFieldDelegate {
                    shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool {
 
-//        let userText = textField.text ?? ""
+        
+
+        for value in scrambledWord.text! {
+                for char in string {
+                    if !(newWord.contains(value)) {
+                    if value == char {
+                        newWord += value.description//b
+                        }
+                    }
+            }
+        }
+        
+        print(newWord)
+
 //
-//        for char in userText {
-//            if
-//        }
-        
-        
+                            
+//                            let rePlaced = scrambledWordArray.remove(at: Int)
+//                            let replaced = scrambledWord.text?.replacingCharacters(in: RangeExpression, with: <#T##StringProtocol#>)
+        //                    scramledWordArray.remove(at: )
+//                        }
+//                    }
+//                }
         
         
         
@@ -91,18 +99,3 @@ extension ViewController: UITextFieldDelegate {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-//        if let oldString = textField.text {
-//            let newString = oldString.replacingCharacters(in: Range(range, in: oldString)!,
-//                                                          with: string)

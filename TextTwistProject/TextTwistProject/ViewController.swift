@@ -17,6 +17,18 @@ class ViewController: UIViewController {
     
     let random = Word.getRandomWord()
     
+    let userAnsComparison = ResultConditions()
+    
+    var scrambledChar: Character = "a" {
+        didSet {
+            
+        }
+    }
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,8 +38,11 @@ class ViewController: UIViewController {
 // functions and methods
     
     func userAnswerCheck() {
-        var userGuess = userAnswer.text ?? ""
+        let userGuess = userAnswer.text ?? ""
         
+        if userGuess == userAnsComparison.winningAns() {
+            
+        }
         
     }
     
@@ -37,15 +52,22 @@ class ViewController: UIViewController {
 extension ViewController: UITextFieldDelegate {
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        <#code#>
+        print("entered FieldShouldBeginEditing")
+        return true
     }
     
-    
-    
-    
-    
-    
-    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+        let userText = textField.text ?? ""
+        
+        for char in userText {
+            if
+        }
+        
+        
+        
+        print("textFieldShouldBeginEditing")
+    }
     
     
     
@@ -54,11 +76,33 @@ extension ViewController: UITextFieldDelegate {
                    shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool {
 
-        if let oldString = textField.text {
-            let newString = oldString.replacingCharacters(in: Range(range, in: oldString)!,
-                                                          with: string)
+//        let userText = textField.text ?? ""
+//
+//        for char in userText {
+//            if
+//        }
+        
+        
+        
+        
+        
             
-        }
     return true
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+//        if let oldString = textField.text {
+//            let newString = oldString.replacingCharacters(in: Range(range, in: oldString)!,
+//                                                          with: string)

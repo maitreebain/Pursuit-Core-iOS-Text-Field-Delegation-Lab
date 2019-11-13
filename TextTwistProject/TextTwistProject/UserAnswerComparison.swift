@@ -30,7 +30,9 @@ class ResultConditions {
         return .incorrect
     }
     
-    
+    func winningAns() -> String {
+        return correctAns
+    }
     
     
 }

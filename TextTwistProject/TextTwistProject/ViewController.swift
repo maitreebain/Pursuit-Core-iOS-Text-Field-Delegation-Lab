@@ -20,12 +20,16 @@ class ViewController: UIViewController {
     let userAnsComparison = ResultConditions()
     
     var newWord = ""
-
+    var guessLetters = [String]()
+    
+    var originalWord = ""
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         scrambledWord.text = random.scrambled
+        originalWord = scrambledWord.text ?? ""
         
         userAnswer.delegate = self
 
@@ -75,6 +79,25 @@ extension ViewController: UITextFieldDelegate {
         var firstTime: Bool = true
         
         newWord = ""
+    
+        if let char = string.cString(using: String.Encoding.utf8) {
+            let isBackSpace = strcmp(char, "\\b")
+              if (isBackSpace == -92) {
+                print("backspace hit")
+                for value in originalWord {
+                    for char in scrambledWord.text! {
+                        if value == char {
+                            continue
+                        } else {
+                            newWord += value.description
+                        }
+                    }
+                }
+                return true
+              }
+          }
+        
+        
         for value in scrambledWord.text! {
             if String(value) == string && firstTime {
                 if scrambledWord.text!.count == 1 {
@@ -83,20 +106,29 @@ extension ViewController: UITextFieldDelegate {
                     //winning part
                 } else {
                 firstTime = false
-                
                 continue
                 }
+//                if newWord.count < scrambledWord.text!.count {
+//                    scrambledWord.text! += newWord
+//                }
             } else {
 
                 newWord += value.description
                 
                 scrambledWord.text = newWord
                 
+//                guessLetters = [value.description]
+//                scrambledWord.text = guessLetters.popLast()
+            
             }
+            
         }
         
+
         
         print(newWord)
+        
+
         
     return true
     }

@@ -69,18 +69,34 @@ extension ViewController: UITextFieldDelegate {
                    shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool {
 
+        print(string)
+        print(scrambledWord.text)
         
+        var firstTime: Bool = true
+        
+        newWord = ""
         for value in scrambledWord.text! {
-                for char in string {
-                    if value == char {
-                        newWord += value.description//b
-                        
-                        scrambledWord.text?.remove(at: (scrambledWord.text?.firstIndex(of: Character(string)))!)
-                        }
+            if String(value) == string && firstTime {
+                if scrambledWord.text!.count == 1 {
+                    scrambledWord.text = random.unscrambled
+                    
+                    //winning part
+                } else {
+                firstTime = false
+                
+                continue
+                }
+            } else {
+
+                newWord += value.description
+                
+                scrambledWord.text = newWord
+                
             }
         }
         
-    print(newWord)
+        
+        print(newWord)
         
     return true
     }
